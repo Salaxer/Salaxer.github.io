@@ -4,8 +4,6 @@
 }
 body {
   margin: 0;
-  display: flex;
-  align-items: center;
   height: 100vh;
   background: url(../fondo.jpg) no-repeat center/cover;
   backdrop-filter: blur(10px);
@@ -78,9 +76,13 @@ main {
   background-color: #5f5f5f;
   border-radius: 10px;
 }
+
 .gameboard__intern--grid.user .button {
-  margin: 5px;
   background-color: #acacac;
+}
+
+.gameboard__intern--grid.user .button, ._high_button {
+  margin: 5px;
   border-radius: 3px;
   border-top: 5px solid #c9c9c9;
   border-right: 5px solid #434343;
@@ -89,12 +91,6 @@ main {
 }
 ._high_button {
   background-color: #04509b;
-  margin: 5px;
-  border-radius: 3px;
-  border-top: 5px solid #c9c9c9;
-  border-right: 5px solid #434343;
-  border-left: 5px solid #434343;
-  border-bottom: 5px solid #2c2c2c;
 }
 
 .color {
