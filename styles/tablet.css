@@ -1,0 +1,20 @@
+.gameboard {
+    border: #101315 solid 6px;
+    max-height: 60vh;
+    max-width: 50vh;
+}
+
+.gameboard__intern {
+    border-top: 40px solid #c9c9c9;
+    border-right: 40px solid #434343;
+    border-left: 40px solid #434343;
+    border-bottom: 40px solid #2c2c2c;
+}
+
+.led {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1.5px solid #2c2c2c;
+    margin: 8px;
+}
