@@ -6,51 +6,53 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="gameboard">
-        <div class="gameboard__intern">
-            <div class="gameboard__intern--leds">
-                <div id="one_led" class="led"></div>
-                <div id="two_led" class="led"></div>
-                <div id="three_led" class="led"></div>
-                <div id="four_led" class="led"></div>
-                <div id="five_led" class="led"></div>
-            </div>
-            <div class="gameboard__intern--grid game">
-                <div id="one" class="display" data-number="one"></div>
-                <div id="two" class="display" data-number="two"></div>
-                <div id="three" class="display" data-number="three"></div>
-                <div id="four" class="display" data-number="four"></div>
-                <div id="five" class="display" data-number="five"></div>
-                <div id="six" class="display" data-number="six"></div>
-                <div id="seven" class="display" data-number="seven"></div>
-                <div id="eight" class="display" data-number="eight"></div>
-                <div id="nine" class="display" data-number="nine"></div>
-            </div>
-        </div>
-    </div>
-    <div class="gameboard">
-        <div class="gameboard__intern">
-            <div class="gameboard__intern--leds">
-                <div id="one_leduser" class="led"></div>
-                <div id="two_leduser" class="led"></div>
-                <div id="three_leduser" class="led"></div>
-                <div id="four_leduser" class="led"></div>
-                <div id="five_leduser" class="led"></div>
-            </div>
-            <div class="gameboard__intern--grid user">
-                <div id="one__user" class="button _high" data-number="one__user"></div>
-                <div id="two__user" class="button" data-number="two__user"></div>
-                <div id="three__user" class="button" data-number="three__user"></div>
-                <div id="four__user" class="button" data-number="four__user"></div>
-                <div id="five__user" class="button" data-number="five__user"></div>
-                <div id="six__user" class="button" data-number="six__user"></div>
-                <div id="seven__user" class="button" data-number="seven__user"></div>
-                <div id="eight__user" class="button" data-number="eight__user"></div>
-                <div id="nine__user" class="button" data-number="nine__user"></div>
-                <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar a jugar!</button>
+    <main>
+        <div class="gameboard">
+            <div class="gameboard__intern">
+                <div class="gameboard__intern--leds">
+                    <div id="one_led" class="led"></div>
+                    <div id="two_led" class="led"></div>
+                    <div id="three_led" class="led"></div>
+                    <div id="four_led" class="led"></div>
+                    <div id="five_led" class="led"></div>
+                </div>
+                <div class="gameboard__intern--grid game">
+                    <div id="one" class="display" data-number="one"></div>
+                    <div id="two" class="display" data-number="two"></div>
+                    <div id="three" class="display" data-number="three"></div>
+                    <div id="four" class="display" data-number="four"></div>
+                    <div id="five" class="display" data-number="five"></div>
+                    <div id="six" class="display" data-number="six"></div>
+                    <div id="seven" class="display" data-number="seven"></div>
+                    <div id="eight" class="display" data-number="eight"></div>
+                    <div id="nine" class="display" data-number="nine"></div>
+                </div>
             </div>
         </div>
-    </div>
+        <div class="gameboard">
+            <div class="gameboard__intern">
+                <div class="gameboard__intern--leds">
+                    <div id="one_leduser" class="led"></div>
+                    <div id="two_leduser" class="led"></div>
+                    <div id="three_leduser" class="led"></div>
+                    <div id="four_leduser" class="led"></div>
+                    <div id="five_leduser" class="led"></div>
+                </div>
+                <div class="gameboard__intern--grid user">
+                    <div id="one__user" class="button _high" data-number="one__user"></div>
+                    <div id="two__user" class="button" data-number="two__user"></div>
+                    <div id="three__user" class="button" data-number="three__user"></div>
+                    <div id="four__user" class="button" data-number="four__user"></div>
+                    <div id="five__user" class="button" data-number="five__user"></div>
+                    <div id="six__user" class="button" data-number="six__user"></div>
+                    <div id="seven__user" class="button" data-number="seven__user"></div>
+                    <div id="eight__user" class="button" data-number="eight__user"></div>
+                    <div id="nine__user" class="button" data-number="nine__user"></div>
+                    <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar a jugar!</button>
+                </div>
+            </div>
+        </div>
+    </main>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./index.js"></script>
   </body>
