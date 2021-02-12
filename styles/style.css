@@ -8,6 +8,7 @@ body {
   align-items: center;
   height: 100vh;
   background: url(../fondo.jpg) no-repeat center/cover;
+  backdrop-filter: blur(10px);
 }
 
 main {
