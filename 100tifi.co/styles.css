@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap');
 
+
+:root{
+  --background: #f4f4f4;
+  --background-item: #f4f4f4;
+  --text-color: #15302C;
+  --card-color: #025a70;
+}
+/* f4f4f4 claro background*/
+/* 3c484e claro  text */
+/* text-color #15302C */
+/* carrd color #025a70 */
 body {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #3c484e;
+  background-color: var(--background);
+  color: var(--text-color);
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -12,11 +23,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .Header a {
   text-decoration: none;
-  color: #15302C;
+  color: var(--text-color);
+}
+.Header-nav{
+  padding-bottom: 20px;
 }
 
 .Main {
@@ -26,12 +41,14 @@ body {
   justify-content: center;
 }
 
+
 .Characters {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5rem;
   grid-row-gap: 1.5em;
   display: grid;
 }
+
 
 .Characters-inner {
   grid-template-columns: 1fr 2fr;
@@ -41,6 +58,7 @@ body {
 }
 
 .Characters-card {
+  background-color: var(--background-item);
   text-decoration: none;
   box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
   border-radius: 5px;
@@ -70,13 +88,18 @@ body {
 }
 
 .Characters-item {
+  transition: all .5ms ease;
   text-decoration: none;
-  box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
   border-radius: 5px;
   margin: 0 0 20px 0;
+  border: 1px solid rgba(107, 107, 107, 0.165);
   display: block;
   animation-duration: 2s;
   animation-name: fade;
+  background-color: var(--background-item);
+}
+.Characters-item:hover{
+  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.2), 1px 3px 8px rgba(39, 44, 49, 0.075);
 }
 
 .Characters-item img {
@@ -84,7 +107,6 @@ body {
   height: auto;
   border-radius: 5px 5px 0 0;
 }
-
 .Characters-item h2 {
   font-size: 18px;
   font-weight: 300;
@@ -94,8 +116,56 @@ body {
 }
 
 .Characters-item a {
-  text-decoration: none;
-  color: #026C86;
+  text-decoration: none; 
+  color: var(--card-color);
+}
+.Characters-info{
+  display: flex;
+  justify-content: space-between;
+}
+.Characters-item h3 {
+  font-size: 16px;
+  font-weight: 300;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+@media Only screen and (max-width: 720px){
+  .Characters{
+    grid-template-columns: repeat(2, 1fr);
+    width: 95%;
+  }
+
+}
+
+@media Only screen and (max-width: 400px) {
+  .Characters{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .Characters-inner{
+    grid-template-columns: 1fr;
+  }
+}
+.Alive{
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background-color: rgb(12, 157, 12);
+  margin-left: 5px;
+}
+.Dead{
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background-color: rgb(187, 1, 1);
+  margin-left: 5px;
+}
+.unknown{
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background-color: rgb(116, 115, 115);
+  margin-left: 5px;
 }
 
 @keyframes fade {
@@ -119,4 +189,76 @@ body {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* toggle switch */
+
+.switchBtn {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 34px;
+  z-index: 0;
+}
+.switchBtn input {
+  display:none;
+}
+.slide {
+  position: absolute;
+  z-index: 5;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(179, 179, 179);
+  -webkit-transition: .4s;
+  transition: .4s;
+  padding: 8px;
+  color: #fff;
+}
+.slide:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 58px;
+  bottom: 4px;
+  background-color: var(--background);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slide {
+  background-color: var(--background-item);
+  padding-left: 40px;
+}
+input:focus + .slide {
+  box-shadow: 0 0 1px #01aeed;
+}
+input:checked + .slide:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  left: -20px;
+}
+.slide.round {
+  border-radius: 34px;
+}
+.slide.round:before {
+  border-radius: 50%;
+}
+#sunday{
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  z-index: 10;
+  font-size: 25px;
+}
+#moonday{
+  position: absolute;
+  left: 59px;
+  font-size: 25px;
+  z-index: 10;
+  display: none;
+  top: 4px;
 }
