@@ -1,1 +1,3 @@
 *.gif
+/dist
+/node_modules
